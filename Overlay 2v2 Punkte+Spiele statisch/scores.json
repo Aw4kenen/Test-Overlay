@@ -1,10 +1,11 @@
 {
   "team1": {
     "name": "Team Cat",
-    "score": 8
+    "score": 0
   },
   "team2": {
-    "name": "Team Dog",
-    "score": 10
+    "name": "Team Fisch",
+    "score": 0
   }
+
 }
