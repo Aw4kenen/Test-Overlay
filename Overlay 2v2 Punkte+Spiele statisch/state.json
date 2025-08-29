@@ -1,9 +1,11 @@
 {
   "current": { 
-    "name": "Spiel 3" 
+     
   },
   "played": [
-    { "name": "Spiel 1", "points": 1, "winner": "Team Links" },
-    { "name": "Spiel 2", "points": 1, "winner": "Team Rechts" }
+    { "name": "Spiel 1", "points": 1, "winner": "Team Cat" },
+    { "name": "Spiel 2", "points": 2, "winner": "Team Fisch" },
+    { "name": "Spiel 3", "points": 3, "winner": "Team Cat" }
   ]
 }
+
