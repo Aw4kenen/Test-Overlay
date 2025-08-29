@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini-Olympiade Overlay – kompakt</title>
+  <style>
+    html, body {margin:0; padding:0; width:1920px; height:1080px; background:transparent; font-family:Arial,sans-serif; overflow:hidden;}
+
+    /* Team Score Styling kompakt */
+    .team-container {position:absolute; bottom:20px; display:flex; flex-direction:column; align-items:center; gap:3px;}
+    .team-left {left:40px; align-items:flex-start;}
+    .team-right {right:40px; align-items:flex-end;}
+    .team-name {font-size:16px; font-weight:bold; color:white; margin-bottom:3px; text-shadow:-1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black,1px 1px 0 black;}
+    .score-wrapper-left, .score-wrapper-right {position:relative; display:flex; align-items:center; border-radius:20px; overflow:visible; height:50px;}
+    .score-wrapper-left {flex-direction:row;}
+    .score-wrapper-right {flex-direction:row-reverse;}
+    .team-icons-left, .team-icons-right {position:absolute; top:50%; transform:translateY(-50%); display:flex; z-index:3;}
+    .team-icons-left {left:0; flex-direction:row;}
+    .team-icons-right {right:0; flex-direction:row-reverse;}
+    .team-icon {width:50px; height:50px; border-radius:50%; background-size:cover; background-position:center; border:1.5px solid black; z-index:2;}
+    .team-icons-left .second-icon {margin-left:-10px; z-index:1;}
+    .team-icons-right .second-icon {margin-right:-10px; z-index:1;}
+    .score-bar-left {background:rgba(0,255,100,0.6); border-radius:20px; color:white; font-weight:bold; padding:0 10px; height:35px; display:flex; align-items:center; justify-content:flex-end; transition:width 0.5s ease; position:relative; z-index:1; min-width:70px;}
+    .score-bar-right {background:rgba(0,255,100,0.6); border-radius:20px; color:white; font-weight:bold; padding:0 10px; height:35px; display:flex; align-items:center; justify-content:flex-start; transition:width 0.5s ease; position:relative; z-index:1; min-width:70px;}
+
+    /* Spiele-Liste links mittig kompakt */
+    .games-wrap {position:fixed; top:50%; left:0; transform:translateY(-50%); padding:6px; display:grid; gap:4px;}
+    .game-item {display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.4); color:white; padding:4px 8px; border-radius:10px; min-width:140px; font-size:12px;}
+    .game-left {display:flex; align-items:center; gap:6px;}
+    .dot {width:6px; height:6px; border-radius:50%; background:#7dd3fc;}
+    .current {border:1px solid #7dd3fc; animation: pulse 1s infinite alternate;}
+    @keyframes pulse {from {opacity:0.8;} to {opacity:1;}}
+    .winner {color:#86efac; font-weight:600; font-size:10px;}
+    .points {font-size:10px; font-weight:600;}
+  </style>
+</head>
+<body>
+
+  <!-- Team Score Overlay kompakt -->
+  <div class="team-container team-left">
+    <div class="team-name" id="team1-name">Team Links</div>
+    <div class="score-wrapper-left">
+      <div class="team-icons-left">
+        <div class="team-icon" style="background-image: url('team1_player1.png');"></div>
+        <div class="team-icon second-icon" style="background-image: url('team1_player2.png');"></div>
+      </div>
+      <div class="score-bar-left" id="team1-bar">0</div>
+    </div>
+  </div>
+
+  <div class="team-container team-right">
+    <div class="team-name" id="team2-name">Team Rechts</div>
+    <div class="score-wrapper-right">
+      <div class="team-icons-right">
+        <div class="team-icon" style="background-image: url('team2_player1.png');"></div>
+        <div class="team-icon second-icon" style="background-image: url('team2_player2.png');"></div>
+      </div>
+      <div class="score-bar-right" id="team2-bar">0</div>
+    </div>
+  </div>
+
+<script>
+    async function loadScores() {
+      try {
+        const response = await fetch('scores.json', { cache: "no-cache" });
+        const data = await response.json();
+
+        // Team 1
+        const score1 = parseInt(data.team1.score);
+        const name1 = data.team1.name || "Team Links";
+        const bar1 = document.getElementById('team1-bar');
+        document.getElementById('team1-name').textContent = name1;
+        bar1.textContent = score1;
+        bar1.style.width = (score1 * 30 + 100) + 'px'; // minimalbreite + wachsend
+
+        // Team 2
+        const score2 = parseInt(data.team2.score);
+        const name2 = data.team2.name || "Team Rechts";
+        const bar2 = document.getElementById('team2-bar');
+        document.getElementById('team2-name').textContent = name2;
+        bar2.textContent = score2;
+        bar2.style.width = (score2 * 30 + 95) + 'px';
+
+      } catch (e) {
+        console.error("Fehler beim Laden der Punktzahlen:", e);
+      }
+    }
+
+    loadScores();
+    setInterval(loadScores, 5000);
+  </script>
+  
+  <!-- Spiele-Liste links mittig kompakt -->
+ <div class="games-wrap" id="gameList"></div>
+
+<script>
+  let state = {};
+
+  async function loadState() {
+    try {
+      const res = await fetch('state.json?_=' + Date.now()); 
+      state = await res.json();
+    } catch (e) {
+      console.error("Fehler beim Laden der state.json", e);
+    }
+  }
+
+  function render() {
+    const list = document.getElementById('gameList'); 
+    list.innerHTML='';
+
+    // aktuelles Spiel
+    if(state.current){
+      const div = document.createElement('div');
+      div.className='game-item current';
+      div.innerHTML=`
+        <div class='game-left'>
+          <span class='dot'></span>
+          <div>${state.current.name}
+            <div class='points'>${(state.played?.length || 0) + 1} Punkt(e)</div>
+          </div>
+        </div>
+        <div class='winner'>läuft</div>`;
+      list.appendChild(div);
+    }
+
+    // bereits gespielte Spiele
+    (state.played || []).forEach((g)=>{
+      const div = document.createElement('div');
+      div.className='game-item';
+      div.innerHTML=`
+        <div class='game-left'>
+          <span class='dot' style='background:#86efac'></span>
+          <div>${g.name}
+            <div class='points'>${g.points} Pkt</div>
+          </div>
+        </div>
+        <div class='winner'>${g.winner||''}</div>`;
+      list.appendChild(div);
+    });
+  }
+
+  async function update(){
+    await loadState();
+    render();
+  }
+
+  // alle 2 Sekunden aktualisieren
+  setInterval(update, 2000);
+  update();
+</script>
+</body>
+</html>

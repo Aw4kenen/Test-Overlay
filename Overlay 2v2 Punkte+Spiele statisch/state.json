@@ -1,0 +1,9 @@
+{
+  "current": { 
+    "name": "Spiel 3" 
+  },
+  "played": [
+    { "name": "Spiel 1", "points": 1, "winner": "Team Links" },
+    { "name": "Spiel 2", "points": 1, "winner": "Team Rechts" }
+  ]
+}
