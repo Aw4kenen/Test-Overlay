@@ -1,6 +1,6 @@
 {
   "current": { 
-     
+     "name": "Spiel 4"
   },
   "played": [
     { "name": "Spiel 1", "points": 1, "winner": "Team Cat" },
@@ -8,4 +8,5 @@
     { "name": "Spiel 3", "points": 3, "winner": "Team Cat" }
   ]
 }
+
 
