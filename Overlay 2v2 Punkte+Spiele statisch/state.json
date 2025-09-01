@@ -1,7 +1,7 @@
 {
-  "team1": {"name": "Cat & Speggi","score": 5},
+  "team1": {"name": "Cat & Speggi","score": 0},
   
-  "team2": {"name": "Sammy & Thea","score": 5},
+  "team2": {"name": "Sammy & Thea","score": 0},
   
   "current": {"name": "Spiel 2"},
   
@@ -10,6 +10,7 @@
    
   ]
 }
+
 
 
 
