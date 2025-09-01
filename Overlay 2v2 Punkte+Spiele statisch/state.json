@@ -1,13 +1,17 @@
 {
+  "team1": {
+    "name": "Team Cat",
+    "score": 8
+  },
+  "team2": {
+    "name": "Team Dog",
+    "score": 10
+  },
   "current": { 
-     "name": "Spiel 4"
+    "name": "Spiel 3" 
   },
   "played": [
-    { "name": "Spiel 1", "points": 1, "winner": "Team Cat" },
-    { "name": "Golf with your friends", "points": 2, "winner": "Team Fisch" },
-    { "name": "Spiel 3", "points": 3, "winner": "Team Cat" }
+    { "name": "Spiel 1", "points": 1, "winner": "Team Links" },
+    { "name": "Spiel 2", "points": 1, "winner": "Team Rechts" }
   ]
 }
-
-
-
