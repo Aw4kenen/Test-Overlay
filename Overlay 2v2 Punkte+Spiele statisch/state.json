@@ -1,5 +1,5 @@
 {
-  "team1": {"name": "Cat & Speggi","score": 4},
+  "team1": {"name": "Cat & Speggi","score": 20},
   
   "team2": {"name": "Sammy & Thea","score": 12},
   
@@ -12,6 +12,7 @@
     { "name": "Spiel 4", "points": 4, "winner": "Sammy & Thea" }
   ]
 }
+
 
 
 
