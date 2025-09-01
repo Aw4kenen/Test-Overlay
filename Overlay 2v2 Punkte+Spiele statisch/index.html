@@ -21,7 +21,7 @@
     .team-icons-left .second-icon {margin-left:-10px; z-index:1;}
     .team-icons-right .second-icon {margin-right:-10px; z-index:1;}
     .score-bar-left {background:rgba(145,70,255,0.6); border-radius:20px; color:white; font-weight:bold; padding:0 10px; height:35px; display:flex; align-items:center; justify-content:flex-end; transition:width 0.5s ease; position:relative; z-index:1; min-width:70px;}
-    .score-bar-right {background:rgba(0,255,100,0.6); border-radius:20px; color:white; font-weight:bold; padding:0 10px; height:35px; display:flex; align-items:center; justify-content:flex-start; transition:width 0.5s ease; position:relative; z-index:1; min-width:70px;}
+    .score-bar-right {background:rgba(145,70,255,0.6); border-radius:20px; color:white; font-weight:bold; padding:0 10px; height:35px; display:flex; align-items:center; justify-content:flex-start; transition:width 0.5s ease; position:relative; z-index:1; min-width:70px;}
 
     /* Spiele-Liste links mittig kompakt */
     .games-wrap {position:fixed; top:50%; left:0; transform:translateY(-50%); padding:6px; display:grid; gap:4px;}
@@ -79,7 +79,7 @@
         const bar2 = document.getElementById('team2-bar');
         document.getElementById('team2-name').textContent = name2;
         bar2.textContent = score2;
-        bar2.style.width = (score2 * 30 + 95) + 'px';
+        bar2.style.width = (score2 * 40 + 100) + 'px';
 
       } catch (e) {
         console.error("Fehler beim Laden der Punktzahlen:", e);
@@ -151,6 +151,7 @@
 </script>
 </body>
 </html>
+
 
 
 
