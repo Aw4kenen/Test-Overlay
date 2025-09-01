@@ -3,13 +3,14 @@
   
   "team2": {"name": "Sammy & Thea","score": 5},
   
-  "current": {"name": "Spiel 2"},
+  "current": {},
   
   "played": [
     { "name": "Spiel 1", "points": 1, "winner": "Cat & Speggi" }
    
   ]
 }
+
 
 
 
