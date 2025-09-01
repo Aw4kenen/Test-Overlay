@@ -1,17 +1,16 @@
 {
-  "team1": {"name": "Cat & Speggi","score": 20},
+  "team1": {"name": "Cat & Speggi","score": 5},
   
-  "team2": {"name": "Sammy & Thea","score": 12},
+  "team2": {"name": "Sammy & Thea","score": 5},
   
-  "current": {"name": "Spiel 5"},
+  "current": {"name": "Spiel 2"},
   
   "played": [
-    { "name": "Spiel 1", "points": 1, "winner": "Cat & Speggi" },
-    { "name": "Spiel 2", "points": 2, "winner": "Sammy & Thea" },
-    { "name": "Spiel 3", "points": 3, "winner": "Cat & Speggi" },
-    { "name": "Spiel 4", "points": 4, "winner": "Sammy & Thea" }
+    { "name": "Spiel 1", "points": 1, "winner": "Cat & Speggi" }
+   
   ]
 }
+
 
 
 
