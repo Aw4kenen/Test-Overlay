@@ -1,16 +1,17 @@
 {
-  "team1": {"name": "Cat & Speggi","score": 5},
+  "team1": {"name": "Cat & Speggi","score": 4},
   
-  "team2": {"name": "Sammy & Thea","score": 11},
+  "team2": {"name": "Sammy & Thea","score": 2},
   
   "current": {"name": "Spiel 4"},
   
   "played": [
-    { "name": "GeoGuessr", "points": 1, "winner": "Cat & Speggi" },
-    { "name": "Golf w y friends", "points": 2, "winner": "Sammy & Thea" },
-    { "name": "Make Way", "points": 3, "winner": "Cat & Speggi" }
+    { "name": "Spiel 1", "points": 1, "winner": "Cat & Speggi" },
+    { "name": "Spiel 2", "points": 2, "winner": "Sammy & Thea" },
+    { "name": "Spiel 3", "points": 3, "winner": "Cat & Speggi" }
   ]
 }
+
 
 
 
