@@ -32,7 +32,8 @@
     @keyframes pulse {from {opacity:0.7;} to {opacity:1;}}
     .winner {color:#86efac; font-weight:600; font-size:12px;}
     .läuft {color:#7dd3fc; font-weight:600; font-size:12px;}
-    .points {color:rgb(145, 70, 255);font-size:10px; font-weight:600;}
+    .points {color:#86efac;font-size:10px; font-weight:600;}
+    .pointscurrent {color:#7dd3fc;font-size:10px; font-weight:600;}
   </style>
 </head>
 <body>
@@ -118,7 +119,7 @@
         <div class='game-left'>
           <span class='dot'></span>
           <div>${state.current.name}
-            <div class='points'>${(state.played?.length || 0) + 1} Pkt</div>
+            <div class='pointscurrent'>${(state.played?.length || 0) + 1} Pkt</div>
           </div>
         </div>
         <div class='läuft'>läuft</div>`;
@@ -152,6 +153,7 @@
 </script>
 </body>
 </html>
+
 
 
 
