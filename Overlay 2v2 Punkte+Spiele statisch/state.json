@@ -1,21 +1,22 @@
 {
-  "team1": {"name": "Cat & Speggi","score": 14},
+  "team1": {"name": "Cat & Sammy","score": 12},
   
-  "team2": {"name": "Sammy & Thea","score": 14},
+  "team2": {"name": "Speggi & Thea","score": 9},
   
   "current": {"name": "Sortieren"},
   
   "played": [
-    { "name": "GeoGuessr", "points": 1, "winner": "Cat & Speggi" },
-    { "name": "WWM", "points": 2, "winner": "Cat & Speggi" },
-    { "name": "Fall Guys", "points": 3, "winner": "Cat & Speggi" },
-    { "name": "Golf", "points": 4, "winner": "Cat & Speggi" },
-    { "name": "Make Way", "points": 5, "winner": "Cat & Speggi" },
-    { "name": "Stadt,Land,...", "points": 6, "winner": "Cat & Speggi" }
+    { "name": "GeoGuessr", "points": 1, "winner": "Cat & Sammy" },
+    { "name": "WWM", "points": 2, "winner": "Cat & Sammy" },
+    { "name": "Fall Guys", "points": 3, "winner": "Speggi & Thea" },
+    { "name": "Golf", "points": 4, "winner": "Cat & Sammy" },
+    { "name": "Make Way", "points": 5, "winner": "Cat & Sammy" },
+    { "name": "Stadt,Land,...", "points": 6, "winner": "Speggi & Thea" }
     
    
   ]
 }
+
 
 
 
