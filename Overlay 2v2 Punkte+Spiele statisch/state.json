@@ -6,10 +6,17 @@
   "current": {"name": "Spiel 2"},
   
   "played": [
-    { "name": "Spiel 1", "points": 1, "winner": "Cat & Speggi" }
+    { "name": "GeoGuessr", "points": 1, "winner": "Cat & Speggi" },
+    { "name": "WWM", "points": 2, "winner": "Cat & Speggi" },
+    { "name": "Fall Guys", "points": 3, "winner": "Cat & Speggi" },
+    { "name": "Golf", "points": 4, "winner": "Cat & Speggi" },
+    { "name": "Make Way", "points": 5, "winner": "Cat & Speggi" },
+    { "name": "Stadt,Land,...", "points": 6, "winner": "Cat & Speggi" },
+    { "name": "Sortieren", "points": 7, "winner": "Cat & Speggi" }
    
   ]
 }
+
 
 
 
