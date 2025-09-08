@@ -1,7 +1,7 @@
 {
-  "team1": {"name": "Cat & Sammy","score": 1},
+  "team1": {"name": "Cat & Sammy","score": 15},
   
-  "team2": {"name": "Speggi & Thea","score": 0},
+  "team2": {"name": "Speggi & Thea","score": 10},
   
   "current": {"name": "Fall Guys"},
   
@@ -11,6 +11,7 @@
    
   ]
 }
+
 
 
 
