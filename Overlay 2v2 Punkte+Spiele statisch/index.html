@@ -31,6 +31,7 @@
     .current {border:1px solid #7dd3fc; animation: pulse 1s infinite alternate;}
     @keyframes pulse {from {opacity:0.7;} to {opacity:1;}}
     .winner {color:#86efac; font-weight:600; font-size:12px;}
+    .läuft {color:#7dd3fc; font-weight:600; font-size:12px;}
     .points {color:rgb(145, 70, 255);font-size:10px; font-weight:600;}
   </style>
 </head>
@@ -120,7 +121,7 @@
             <div class='points'>${(state.played?.length || 0) + 1} Pkt</div>
           </div>
         </div>
-        <div class='winner'>läuft</div>`;
+        <div class='läuft'>läuft</div>`;
       list.appendChild(div);
     }
 
@@ -151,6 +152,7 @@
 </script>
 </body>
 </html>
+
 
 
 
