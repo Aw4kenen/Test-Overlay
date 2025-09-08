@@ -3,7 +3,7 @@
   
   "team2": {"name": "Sammy & Thea","score": 14},
   
-  "current": {"name": "Spiel 2"},
+  "current": {"name": "Sortieren"},
   
   "played": [
     { "name": "GeoGuessr", "points": 1, "winner": "Cat & Speggi" },
@@ -12,10 +12,11 @@
     { "name": "Golf", "points": 4, "winner": "Cat & Speggi" },
     { "name": "Make Way", "points": 5, "winner": "Cat & Speggi" },
     { "name": "Stadt,Land,...", "points": 6, "winner": "Cat & Speggi" },
-    { "name": "Sortieren", "points": 7, "winner": "Cat & Speggi" }
+    
    
   ]
 }
+
 
 
 
