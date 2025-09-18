@@ -1,16 +1,17 @@
 {
-  "team1": {"name": "Catwolf","score": 3},
+  "team1": {"name": "Catwolf","score": 6},
   
   "team2": {"name": "FluffyUnicorns","score": 0},
   
-  "current": {"name": "Golf"},
+  "current": {"name": "Fall Guys"},
   
   "played": [
     { "name": "Sortieren Quiz", "points": 1, "winner": "Catwolf" },
-    { "name": "GeoGuessr", "points": 2, "winner": "Catwolf" }
-   
+    { "name": "GeoGuessr", "points": 2, "winner": "Catwolf" },
+    { "name": "Golf", "points": 3, "winner": "Catwolf" }
   ]
 }
+
 
 
 
