@@ -1,5 +1,5 @@
 {
-  "team1": {"name": "Catwolf","score": 0},
+  "team1": {"name": "Catwolf","score": 1},
   
   "team2": {"name": "FluffyUnicorns","score": 0},
   
@@ -10,6 +10,7 @@
    
   ]
 }
+
 
 
 
