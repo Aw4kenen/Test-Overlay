@@ -3,7 +3,7 @@
   
   "team2": {"name": "FluffyUnicorns","score": 4},
   
-  "current": {"name": "TBD"},
+  "current": {"name": "Fall Guys"},
   
   "played": [
     { "name": "Sortieren Quiz", "points": 1, "winner": "Catwolf" },
@@ -12,6 +12,7 @@
     { "name": "Golf", "points": 4, "winner": "Unicorns" }
   ]
 }
+
 
 
 
