@@ -3,13 +3,14 @@
   
   "team2": {"name": "FluffyUnicorns","score": 0},
   
-  "current": {"name": "Sortieren Quiz"},
+  "current": {"name": "GeoGuessr"},
   
   "played": [
-    
+    { "name": "Sortieren Quiz", "points": 1, "winner": "Catwolf" }
    
   ]
 }
+
 
 
 
